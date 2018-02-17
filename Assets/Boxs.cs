@@ -5,6 +5,7 @@ using UnityEngine;
 public class Boxs : MonoBehaviour {
 	float rotationx;
 	float rotationy;
+	float rotationz;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,8 @@ public class Boxs : MonoBehaviour {
 	void Update () {
 		rotationx += Time.deltaTime * 100;
 		rotationy += Time.deltaTime * 100;
-		transform.rotation = Quaternion.Euler (rotationx, rotationy, 0);
+		rotationz += Time.deltaTime * 100;
+		transform.rotation = Quaternion.Euler (rotationx, rotationy, rotationz);
 
 		
 	}
